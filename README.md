@@ -25,3 +25,5 @@ additivemodels/
 ├── .gitignore
 └── README.md
 ```
+
+All data and labels pulled from: https://github.com/TianshuangQiu/AdditiveParts
