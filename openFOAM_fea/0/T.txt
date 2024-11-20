@@ -1,0 +1,24 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      T;
+}
+
+dimensions      [0 0 0 1 0 0 0];         // Units of temperature (Kelvin)
+internalField   uniform 300;             // Initial temperature (e.g., 300K)
+
+boundaryField
+{
+    defaultFaces
+    {
+        type            zeroGradient;
+    }
+
+    heatedWall
+    {
+        type            fixedValue;
+        value           uniform 400;     // Fixed temperature at boundary
+    }
+}

@@ -1,0 +1,17 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+
+application     solidDisplacementFoam;  // Solver for structural mechanics
+startFrom       startTime;
+startTime       0;
+stopAt          endTime;
+endTime         1;                      // End time for the simulation
+deltaT          0.001;                  // Time step
+writeControl    timeStep;
+writeInterval   10;                     // Write every 10 time steps
+purgeWrite      0;

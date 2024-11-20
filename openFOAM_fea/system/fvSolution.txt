@@ -1,0 +1,31 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSolution;
+}
+
+solvers
+{
+    displacement
+    {
+        solver          PCG;            // Preconditioned Conjugate Gradient
+        preconditioner  DIC;            // Diagonal Incomplete Cholesky
+        tolerance       1e-8;
+        relTol          0;
+    }
+}
+
+relaxationFactors
+{
+    fields
+    {
+        p               0.3;            // Relaxation for pressure
+    }
+
+    equations
+    {
+        U               0.7;            // Relaxation for displacement
+    }
+}
