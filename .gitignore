@@ -163,3 +163,5 @@ cython_debug/
 
 
 /data
+constant/triSurface/*.stl
+.DS_Store.DS_Store

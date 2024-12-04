@@ -1,0 +1,30 @@
+ FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+
+dimensions      [0 1 -1 0 0 0 0];        // Units of displacement (meters)
+internalField   uniform (0 0 0);         // Initial displacement (x, y, z)
+
+boundaryField
+{
+    defaultFaces
+    {
+        type            zeroGradient;
+    }
+
+    fixedWall          // Name of boundary
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);  // Fixed displacement at the boundary
+    }
+
+    movingWall
+    {
+        type            fixedValue;
+        value           uniform (0.01 0 0);  // Small movement in x-direction
+    }
+}

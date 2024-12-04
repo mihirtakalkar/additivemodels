@@ -1,0 +1,27 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSchemes;
+}
+
+ddtSchemes
+{
+    default     Euler;                  // Time derivative scheme
+}
+
+gradSchemes
+{
+    default     Gauss linear;           // Gradient calculation scheme
+}
+
+divSchemes
+{
+    default     none;                   // Divergence scheme (not used here)
+}
+
+laplacianSchemes
+{
+    default     Gauss linear corrected; // Laplacian scheme
+}
